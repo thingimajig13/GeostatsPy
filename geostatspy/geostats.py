@@ -318,8 +318,8 @@ def gcum(x):
     """Evaluate the standard normal cdf given a normal deviate `x`. `gcum` is
     the area under a unit normal curve to the left of `x`. The results are
     accurate only to about 5 decimal places.
-    :param x: TODO
-    :return: TODO
+    :param x: the value from the standard normal distribution
+    :return: the area under the unit normal curve from negative infinity to 'x'
     """
     z = x
     if z < 0:
@@ -1187,6 +1187,45 @@ def ikrige(ix,iy,nx,ny,xx,yy,lktype,x,y,vr,sec,colocorr,gmean,lvm,close,covtab,n
     original Fortran to Python and modified for indicator kriging  by Michael Pyrcz, the University of Texas at
     Austin (March, 2019).
     Note this was simplified to 2D only. WARNING: tested only for ktype 0,1,2 (2 is local proportion model / local mean provided, not residual approach)
+    :param ix: grid along x dimension
+    :param iy: grid along y dimension
+    :param nx: shape along x dimension
+    :param ny: shape along y dimension
+    :param xx: TODO
+    :param yy: TODO
+    :param lktype: TODO
+    :param x: the x dimension of data
+    :param y: the y dimension of data
+    :param vr: TODO
+    :param sec: TODO
+    :param colocorr: TODO 
+    :param gmean: TODO
+    :param lvm: TODO
+    :param close: TODO
+    :param covtab: TODO
+    :param nctx: TODO
+    :param ncty: TODO
+    :param icnode: TODO
+    :param ixnode: TODO
+    :param iynode: TODO
+    :param cnodev: TODO
+    :param cnodex: TODO
+    :param cnodey: TODO
+    :param nst: TODO
+    :param c0: TODO
+    :param PMX: TODO
+    :param cc: TODO
+    :param aa: TODO
+    :param it: TODO
+    :param ang: TODO
+    :param anis: TODO
+    :param rotmat: TODO
+    :param maxcov: TODO
+    :param MAXCTX: TODO
+    :param MAXCTY: TODO
+    :param MAXKR1: TODO
+    :param MAXKR2: TODO
+
     """
     EPSLON = 1.0e-20
     cur_index  = ix + (iy)*nx
